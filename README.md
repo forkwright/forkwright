@@ -18,8 +18,11 @@ Unified media manager for movies, books, and audiobooks. Self-hosted, privacy-fo
 ## Stack
 
 **Languages:** Python · C# · TypeScript · SQL
+
 **Data/ML:** FastAPI · Polars · scispaCy · RAG · Vector Embeddings
+
 **Infrastructure:** PostgreSQL · Redis · Elasticsearch · AWS · Docker
+
 **Domain:** Healthcare Analytics · NLP · GDPR Compliance
 
 ---
