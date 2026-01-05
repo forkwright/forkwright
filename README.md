@@ -1,9 +1,5 @@
 # Cody Kickertz
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=forkwright&show_icons=true&theme=dark)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=forkwright&layout=compact&theme=dark)
-
-
 **Data Scientist** | Full-Stack Engineer | Healthcare Analytics | AI/ML Systems
 
 ---
@@ -11,12 +7,23 @@
 ## Current Projects
 
 ### [Mouseion](https://github.com/forkwright/mouseion)
-Backend media manager for movies, books, and audiobooks. Self-hosted, privacy-focused.
+Backend media manager. Self-hosted, privacy-focused.
+
+- 6 media types (Movies, Books, Audiobooks, Music, Podcasts, TV Shows)
+- Full REST API with OpenAPI/Swagger documentation
+- Real-time updates via SignalR
+- OpenTelemetry integration
 
 `C#` `.NET 10` `TypeScript`
 
 ### [Akroasis](https://github.com/forkwright/akroasis)
 Front end media player for Mouseion.
+
+- Cross-platform (Android/Desktop/Web PWA)
+- Bit-perfect audio with Rust core engine
+- High-res audio support (24/96, 24/192, DSD)
+- 5-band parametric EQ, gapless playback
+- Last.fm/ListenBrainz scrobbling
 
 `kotlin` `Typescript` `React` `Rust`
 
@@ -26,7 +33,7 @@ Front end media player for Mouseion.
 
 **Languages:** Python · C# · TypeScript · SQL · Rust · R
 
-**Data/ML:** FastAPI · Polars · scispaCy · RAG · Vector Embeddings
+**Data/ML:** FastAPI · Polars · scispaCy · RAG · Vector Embeddings · LLM API integration · ChromaDB · Qdrant
 
 **Infrastructure:** PostgreSQL · Redis · Elasticsearch · AWS · Docker
 
@@ -39,6 +46,14 @@ Front end media player for Mouseion.
 **Data Scientist @ Summus Global** — GenAI clinical analysis, NLP pipelines, full-stack Medical taxonomy system
 
 **Former:** US Marine Corps Captain Finance Officer · Cybersecurity Research in Collaboration with Clarkson Aerospace & AFRL
+
+---
+
+## Education
+
+**MBA** — UT Austin McCombs School of Business (2026)
+
+**BS Computer Information Systems** — University of Houston
 
 ---
 
