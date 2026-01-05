@@ -2,22 +2,25 @@
 
 **Data Scientist** | Full-Stack Engineer | Healthcare Analytics | AI/ML Systems
 
-Building production data systems. Former Marine Corps Captain. MBA Candidate @ UT McCombs.
-
 ---
 
 ## Current Projects
 
 ### [Mouseion](https://github.com/forkwright/mouseion)
-Unified media manager for movies, books, and audiobooks. Self-hosted, privacy-focused.
+Backend media manager for movies, books, and audiobooks. Self-hosted, privacy-focused.
 
-`C#` `.NET 8` `React` `TypeScript`
+`C#` `.NET 10` `TypeScript`
+
+### [Akroasis](https://github.com/forkwright/akroasis)
+Front end media player for Mouseion.
+
+`kotlin` `Typescript` `React` `Rust`
 
 ---
 
 ## Stack
 
-**Languages:** Python · C# · TypeScript · SQL
+**Languages:** Python · C# · TypeScript · SQL · Rust · R
 
 **Data/ML:** FastAPI · Polars · scispaCy · RAG · Vector Embeddings
 
@@ -31,7 +34,7 @@ Unified media manager for movies, books, and audiobooks. Self-hosted, privacy-fo
 
 **Data Scientist @ Summus Global** — GenAI clinical analysis, NLP pipelines (546k+ medical terms), full-stack taxonomy system
 
-**Former:** US Marine Corps Captain · AFRL Cybersecurity Research
+**Former:** US Marine Corps Captain Finance Officer · Cybersecurity Research in Collaboration with Clarkson Aerospace & AFRL
 
 ---
 
