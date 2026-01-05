@@ -32,7 +32,7 @@ Front end media player for Mouseion.
 
 ## Professional
 
-**Data Scientist @ Summus Global** — GenAI clinical analysis, NLP pipelines (546k+ medical terms), full-stack taxonomy system
+**Data Scientist @ Summus Global** — GenAI clinical analysis, NLP pipelines, full-stack Medical taxonomy system
 
 **Former:** US Marine Corps Captain Finance Officer · Cybersecurity Research in Collaboration with Clarkson Aerospace & AFRL
 
