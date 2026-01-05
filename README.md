@@ -1,5 +1,9 @@
 # Cody Kickertz
 
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=forkwright&show_icons=true&theme=dark)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=forkwright&layout=compact&theme=dark)
+
+
 **Data Scientist** | Full-Stack Engineer | Healthcare Analytics | AI/ML Systems
 
 ---
