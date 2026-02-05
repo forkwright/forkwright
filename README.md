@@ -1,10 +1,10 @@
 # Cody Kickertz
 
-**Data Scientist** | Full-Stack Engineer | Healthcare Analytics | AI/ML Systems
+Data Scientist & AI Systems Architect | Full-Stack Engineer | Small Business Founder/Owner
 
 ---
 
-## Current Projects
+## Current Public Projects
 
 ### [Mouseion](https://github.com/forkwright/mouseion)
 Backend media manager. Self-hosted, privacy-focused.
@@ -43,7 +43,7 @@ Front end media player for Mouseion.
 
 ## Professional
 
-**Data Scientist @ Summus Global** — GenAI clinical analysis, NLP pipelines, full-stack Medical taxonomy system
+**Data Scientist * AI Systems Architect @ Summus Global** — GenAI clinical analysis, NLP pipelines, full-stack Medical taxonomy system, custom AI infrastructure & topology
 
 **Former:** US Marine Corps Captain Finance Officer · Cybersecurity Research in Collaboration with Clarkson Aerospace & AFRL
 
@@ -57,4 +57,4 @@ Front end media player for Mouseion.
 
 ---
 
-[LinkedIn](https://linkedin.com/in/Cody-Kickertz/) · Cody.Kickertz@pm.me
+[LinkedIn](https://linkedin.com/in/Cody-Kickertz/) · [Ardent Leatherworks LLC](ardentleatherworks.com)
