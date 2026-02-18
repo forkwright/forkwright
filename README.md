@@ -1,6 +1,6 @@
 # Cody Kickertz
 
-Data Scientist & AI Systems Architect | Full-Stack Engineer | Small Business Founder/Owner
+Data Scientist & AI Systems Architect | Full-Stack | Small Business Founder/Owner
 
 ---
 
@@ -43,7 +43,7 @@ Front end media player for Mouseion.
 
 ## Professional
 
-**Data Scientist * AI Systems Architect @ Summus Global** — GenAI clinical analysis, NLP pipelines, full-stack Medical taxonomy system, custom AI infrastructure & topology
+**Data Scientist & AI Systems Architect** — GenAI clinical analysis, NLP pipelines, full-stack Medical taxonomy system, custom AI infrastructure & topology
 
 **Former:** US Marine Corps Captain Finance Officer · Cybersecurity Research in Collaboration with Clarkson Aerospace & AFRL
 
