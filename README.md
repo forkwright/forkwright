@@ -63,7 +63,7 @@ Naming follows a Greek based system. [More on that here.](https://github.com/for
 
 ## Other
 
-**[Ardent Leatherworks](https://ardentleatherworks.com)** - Small-batch leather goods. The hand remembers what the mind forgets.
+**[Ardent Leatherworks](https://ardentleatherworks.com)** - Small-batch leather goods LLC.
 
 **The Coherence of Aporia** - A book in progress on cognition, craft, AI topology, and the structure of contradictions that hold.
 
