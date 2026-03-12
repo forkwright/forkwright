@@ -1,6 +1,8 @@
 # Cody Kickertz
 
-Data scientist and AI systems architect. Healthcare analytics professionally, distributed AI systems and self-hosted media tools on my own time.
+Systems engineer. I build sovereign infrastructure in Rust: cognitive agents, media automation, RF intelligence. Everything runs on commodity hardware with no cloud dependencies. Everything is open source.
+
+The public repositories here are the visible edge of a larger ecosystem built around local-first, dependency-conscious design and a strong preference for owned infrastructure over rented abstraction.
 
 ---
 
@@ -8,64 +10,230 @@ Data scientist and AI systems architect. Healthcare analytics professionally, di
 
 ### [Aletheia](https://github.com/forkwright/aletheia)
 
-Self-hosted multi-agent system built in Rust. Persistent memory, tool execution, and Signal messaging - running on commodity hardware with no cloud dependencies beyond an LLM API key.
+*ἀλήθεια: unconcealment, disclosure of what is*
 
-- Rust-native runtime (9 crates), Svelte 5 web UI
-- Embedded database with relational, vector, and graph storage in a single process
-- Local embeddings via fastembed-rs, no external inference services
-- JWT auth, per-agent workspaces, structured planning, adaptive attention
-- AGPL-3.0 (runtime) + Apache-2.0 (SDK/client)
+Multi-agent cognitive runtime. Persistent memory, adaptive recall, and tool execution in a single Rust binary.
 
-`Rust` `TypeScript` `Svelte` `Python`
+- 17 specialized crates (~194K lines of Rust): agent orchestration (Tokio actors), LLM routing, planning, domain knowledge packs, behavioral evaluation
+- Six-factor memory recall: FSRS power-law decay, epistemic confidence tiers (verified > inferred > assumed), graph relationship proximity, vector similarity (HNSW), and behavioral pattern learning
+- Zero external services: vendored CozoDB (Datalog + relational + vector), SQLite sessions, candle embeddings. Only your LLM API key leaves the machine
+- Each agent is a Tokio actor with persistent character, workspace, and memory. Agents coordinate through a bi-temporal knowledge graph, not message queues
+- Per-message XChaCha20Poly1305 encryption at rest. No telemetry. Every network call documented and auditable
+- TUI (ratatui), desktop app (Tauri), HTTP API (Axum)
+
+`Rust` `AGPL-3.0`
 
 ### [Harmonia](https://github.com/forkwright/harmonia)
 
-Unified self-hosted media platform - one system replacing the patchwork of *arr apps.
+*ἁρμονία: the joining together of disparate things*
 
-- **Mouseion** - media management backend (.NET 10/C#, Dapper, SQLite/PostgreSQL). Movies, TV, music, books, audiobooks, podcasts, manga, comics, news. REST API, SignalR, OpenTelemetry.
-- **Akroasis** - media player. Android (Kotlin/Compose), Web (React 19/TypeScript), with a shared Rust audio core for bit-perfect playback, gapless transitions, and ReplayGain.
+Unified media platform replacing the *arr ecosystem. One system handles discovery, download, organization, metadata, serving, and playback for all media types.
 
-`C#` `.NET 10` `Kotlin` `TypeScript` `Rust`
+- Single Rust backend (Mouseion: 10 crates, Tokio + Axum + SQLx) managing movies, TV, music, audiobooks, ebooks, podcasts, manga, comics, news
+- Built-in Torznab/Newznab indexing, BitTorrent client, archive extraction, subtitle management, quality profiles, and household request workflow. No Sonarr, Radarr, Lidarr, Prowlarr, Jackett, qBittorrent, Overseerr, or their 15+ satellite tools
+- Multi-platform player (Akouo) for Android (Kotlin/Compose), web (React 19), and desktop (Tauri). Bit-perfect audio core: symphonia decoding, rubato resampling, EBU R128 loudness, gapless playback
+- QUIC streaming (quinn) for multi-room sync. Event-driven subsystem architecture (aggelia bus). Integrates Last.fm, Tidal, Plex
 
-Naming follows a Greek-based system tied to project role and intent.
+`Rust` `Kotlin` `TypeScript` `C#` `GPL-3.0`
+
+### [Akroasis](https://github.com/forkwright/akroasis)
+
+*ἀκρόασις: attentive reception, learning through disciplined listening*
+
+RF intelligence, mesh networking, and communications sovereignty. 17 crates across 10 capability domains unified under a single typed signal model.
+
+- Every collection domain (radio, mesh, SDR, proximity, network defense, OSINT, offensive security) produces typed GeoSignal objects into a shared model (koinon). Processing is domain-agnostic: semaino reads signs in the noise, ichneutes follows the tracks to focal points, praxis converts understanding into action
+- Standalone Meshtastic stack (kerykeion): clean-room protobuf, delay-tolerant networking, PACE communications with automated failover. CHIRP-compatible radio programming (syntonia) for Baofeng and Yaesu hardware
+- SDR pipeline (dektis): FutureSDR async block graphs, FM/AM/SSB demodulation, APRS/ADS-B/P25 decoding, jamming detection, direction finding, emitter fingerprinting via RTL-SDR and HackRF
+- Suricata/Zeek orchestration (aspis) for network defense with active response. WiFi/BLE/Zigbee/NFC/RFID proximity monitoring (engys). Offline knowledge repository (pinax) with frequency databases, protocol specs, topo maps, emergency procedures
+- Grid-down capable. No cloud. Encrypted by default. Tamper-evident logging with hash chains and chain-of-custody evidence packaging. NixOS reproducible deployment
+- Lethe (λήθη: concealment) handles privacy, VPN orchestration, OPSEC scoring, and IMSI catcher detection. Same root as Aletheia, opposite direction: one unconceals truth, the other conceals the operator
+
+`Rust` `AGPL-3.0`
 
 ---
 
-## Stack
+## How It Gets Built
 
-**Languages:** Rust · C# · TypeScript · Python · SQL · Kotlin · R
-
-**Systems:** Axum · .NET · Svelte · React · Jetpack Compose
-
-**Data:** Polars · scispaCy · SQLite · PostgreSQL · Elasticsearch
-
-**Infrastructure:** Docker · AWS · systemd · GitHub Actions
-
-**Domain:** Healthcare analytics · NLP · GDPR/HIPAA compliance
+These projects are built with closed-loop, issue-driven development: structured prompts, isolated worktrees, parallel agent execution, automated QA gates, and human architectural control.
 
 ---
 
 ## Professional
 
-**Data Scientist & AI Systems Architect** - Clinical NLP pipelines, medical taxonomy systems, GenAI-powered analysis infrastructure. Currently at Summus Global.
+**Data Scientist & AI Systems Architect** at Summus Global. Clinical NLP pipelines, medical taxonomy systems, GenAI analysis infrastructure.
 
-**Former:** USMC Captain, Finance Officer · Cybersecurity research with Clarkson Aerospace & AFRL
+**Former:** USMC Captain, Finance Officer. Cybersecurity research with Clarkson Aerospace & AFRL.
 
----
-
-## Education
-
-**MBA** - UT Austin, McCombs School of Business (2026)
-
-**BS Computer Information Systems** - University of Houston
+**Education:** MBA, UT Austin McCombs (2026). BS Computer Information Systems, University of Houston.
 
 ---
 
 ## Other
 
-**[Ardent Leatherworks](https://ardentleatherworks.com)** - Small-batch leather goods LLC.
+**[Ardent Leatherworks](https://ardentleatherworks.com)** : Small-batch leather goods.
 
-**The Coherence of Aporia** - A book in progress on cognition, craft, AI topology, and the structure of contradictions that hold.
+**The Coherence of Aporia** : A book on cognition, craft, AI topology, and the structure of contradictions that hold.
+
+---
+
+[LinkedIn](https://linkedin.com/in/cody-kickertz/)
+# Cody Kickertz
+
+Systems engineer. I build sovereign infrastructure in Rust: cognitive agents, media automation, RF intelligence. Everything runs on commodity hardware with no cloud dependencies. Everything is open source.
+
+The public repositories here are the visible edge of a larger ecosystem built around local-first, dependency-conscious design and a strong preference for owned infrastructure over rented abstraction.
+
+---
+
+## Projects
+
+### [Aletheia](https://github.com/forkwright/aletheia)
+
+*ἀλήθεια: unconcealment, disclosure of what is*
+
+Multi-agent cognitive runtime. Persistent memory, adaptive recall, and tool execution in a single Rust binary.
+
+- 17 specialized crates (~194K lines of Rust): agent orchestration (Tokio actors), LLM routing, planning, domain knowledge packs, behavioral evaluation
+- Six-factor memory recall: FSRS power-law decay, epistemic confidence tiers (verified > inferred > assumed), graph relationship proximity, vector similarity (HNSW), and behavioral pattern learning
+- Zero external services: vendored CozoDB (Datalog + relational + vector), SQLite sessions, candle embeddings. Only your LLM API key leaves the machine
+- Each agent is a Tokio actor with persistent character, workspace, and memory. Agents coordinate through a bi-temporal knowledge graph, not message queues
+- Per-message XChaCha20Poly1305 encryption at rest. No telemetry. Every network call documented and auditable
+- TUI (ratatui), desktop app (Tauri), HTTP API (Axum)
+
+`Rust` `AGPL-3.0`
+
+### [Harmonia](https://github.com/forkwright/harmonia)
+
+*ἁρμονία: the joining together of disparate things*
+
+Unified media platform replacing the *arr ecosystem. One system handles discovery, download, organization, metadata, serving, and playback for all media types.
+
+- Single Rust backend (Mouseion: 10 crates, Tokio + Axum + SQLx) managing movies, TV, music, audiobooks, ebooks, podcasts, manga, comics, news
+- Built-in Torznab/Newznab indexing, BitTorrent client, archive extraction, subtitle management, quality profiles, and household request workflow. No Sonarr, Radarr, Lidarr, Prowlarr, Jackett, qBittorrent, Overseerr, or their 15+ satellite tools
+- Multi-platform player (Akouo) for Android (Kotlin/Compose), web (React 19), and desktop (Tauri). Bit-perfect audio core: symphonia decoding, rubato resampling, EBU R128 loudness, gapless playback
+- QUIC streaming (quinn) for multi-room sync. Event-driven subsystem architecture (aggelia bus). Integrates Last.fm, Tidal, Plex
+
+`Rust` `Kotlin` `TypeScript` `C#` `GPL-3.0`
+
+### [Akroasis](https://github.com/forkwright/akroasis)
+
+*ἀκρόασις: attentive reception, learning through disciplined listening*
+
+RF intelligence, mesh networking, and communications sovereignty. 17 crates across 10 capability domains unified under a single typed signal model.
+
+- Every collection domain (radio, mesh, SDR, proximity, network defense, OSINT, offensive security) produces typed GeoSignal objects into a shared model (koinon). Processing is domain-agnostic: semaino reads signs in the noise, ichneutes follows the tracks to focal points, praxis converts understanding into action
+- Standalone Meshtastic stack (kerykeion): clean-room protobuf, delay-tolerant networking, PACE communications with automated failover. CHIRP-compatible radio programming (syntonia) for Baofeng and Yaesu hardware
+- SDR pipeline (dektis): FutureSDR async block graphs, FM/AM/SSB demodulation, APRS/ADS-B/P25 decoding, jamming detection, direction finding, emitter fingerprinting via RTL-SDR and HackRF
+- Suricata/Zeek orchestration (aspis) for network defense with active response. WiFi/BLE/Zigbee/NFC/RFID proximity monitoring (engys). Offline knowledge repository (pinax) with frequency databases, protocol specs, topo maps, emergency procedures
+- Grid-down capable. No cloud. Encrypted by default. Tamper-evident logging with hash chains and chain-of-custody evidence packaging. NixOS reproducible deployment
+- Lethe (λήθη: concealment) handles privacy, VPN orchestration, OPSEC scoring, and IMSI catcher detection. Same root as Aletheia, opposite direction: one unconceals truth, the other conceals the operator
+
+`Rust` `AGPL-3.0`
+
+---
+
+## How It Gets Built
+
+These projects are built with closed-loop, issue-driven development: structured prompts, isolated worktrees, parallel agent execution, automated QA gates, and human architectural control.
+
+---
+
+## Professional
+
+**Data Scientist & AI Systems Architect** at Summus Global. Clinical NLP pipelines, medical taxonomy systems, GenAI analysis infrastructure.
+
+**Former:** USMC Captain, Finance Officer. Cybersecurity research with Clarkson Aerospace & AFRL.
+
+**Education:** MBA, UT Austin McCombs (2026). BS Computer Information Systems, University of Houston.
+
+---
+
+## Other
+
+**[Ardent Leatherworks](https://ardentleatherworks.com)** : Small-batch leather goods.
+
+**The Coherence of Aporia** : A book on cognition, craft, AI topology, and the structure of contradictions that hold.
+
+---
+
+[LinkedIn](https://linkedin.com/in/cody-kickertz/)
+# Cody Kickertz
+
+Systems engineer. I build sovereign infrastructure in Rust: cognitive agents, media automation, RF intelligence. Everything runs on commodity hardware with no cloud dependencies. Everything is open source.
+
+The public repositories here are the visible edge of a larger ecosystem built around local-first, dependency-conscious design and a strong preference for owned infrastructure over rented abstraction.
+
+---
+
+## Projects
+
+### [Aletheia](https://github.com/forkwright/aletheia)
+
+*ἀλήθεια: unconcealment, disclosure of what is*
+
+Multi-agent cognitive runtime. Persistent memory, adaptive recall, and tool execution in a single Rust binary.
+
+- 17 specialized crates (~194K lines of Rust): agent orchestration (Tokio actors), LLM routing, planning, domain knowledge packs, behavioral evaluation
+- Six-factor memory recall: FSRS power-law decay, epistemic confidence tiers (verified > inferred > assumed), graph relationship proximity, vector similarity (HNSW), and behavioral pattern learning
+- Zero external services: vendored CozoDB (Datalog + relational + vector), SQLite sessions, candle embeddings. Only your LLM API key leaves the machine
+- Each agent is a Tokio actor with persistent character, workspace, and memory. Agents coordinate through a bi-temporal knowledge graph, not message queues
+- Per-message XChaCha20Poly1305 encryption at rest. No telemetry. Every network call documented and auditable
+- TUI (ratatui), desktop app (Tauri), HTTP API (Axum)
+
+`Rust` `AGPL-3.0`
+
+### [Harmonia](https://github.com/forkwright/harmonia)
+
+*ἁρμονία: the joining together of disparate things*
+
+Unified media platform replacing the *arr ecosystem. One system handles discovery, download, organization, metadata, serving, and playback for all media types.
+
+- Single Rust backend (Mouseion: 10 crates, Tokio + Axum + SQLx) managing movies, TV, music, audiobooks, ebooks, podcasts, manga, comics, news
+- Built-in Torznab/Newznab indexing, BitTorrent client, archive extraction, subtitle management, quality profiles, and household request workflow. No Sonarr, Radarr, Lidarr, Prowlarr, Jackett, qBittorrent, Overseerr, or their 15+ satellite tools
+- Multi-platform player (Akouo) for Android (Kotlin/Compose), web (React 19), and desktop (Tauri). Bit-perfect audio core: symphonia decoding, rubato resampling, EBU R128 loudness, gapless playback
+- QUIC streaming (quinn) for multi-room sync. Event-driven subsystem architecture (aggelia bus). Integrates Last.fm, Tidal, Plex
+
+`Rust` `Kotlin` `TypeScript` `C#` `GPL-3.0`
+
+### [Akroasis](https://github.com/forkwright/akroasis)
+
+*ἀκρόασις: attentive reception, learning through disciplined listening*
+
+RF intelligence, mesh networking, and communications sovereignty. 17 crates across 10 capability domains unified under a single typed signal model.
+
+- Every collection domain (radio, mesh, SDR, proximity, network defense, OSINT, offensive security) produces typed GeoSignal objects into a shared model (koinon). Processing is domain-agnostic: semaino reads signs in the noise, ichneutes follows the tracks to focal points, praxis converts understanding into action
+- Standalone Meshtastic stack (kerykeion): clean-room protobuf, delay-tolerant networking, PACE communications with automated failover. CHIRP-compatible radio programming (syntonia) for Baofeng and Yaesu hardware
+- SDR pipeline (dektis): FutureSDR async block graphs, FM/AM/SSB demodulation, APRS/ADS-B/P25 decoding, jamming detection, direction finding, emitter fingerprinting via RTL-SDR and HackRF
+- Suricata/Zeek orchestration (aspis) for network defense with active response. WiFi/BLE/Zigbee/NFC/RFID proximity monitoring (engys). Offline knowledge repository (pinax) with frequency databases, protocol specs, topo maps, emergency procedures
+- Grid-down capable. No cloud. Encrypted by default. Tamper-evident logging with hash chains and chain-of-custody evidence packaging. NixOS reproducible deployment
+- Lethe (λήθη: concealment) handles privacy, VPN orchestration, OPSEC scoring, and IMSI catcher detection. Same root as Aletheia, opposite direction: one unconceals truth, the other conceals the operator
+
+`Rust` `AGPL-3.0`
+
+---
+
+## How It Gets Built
+
+These projects are built with closed-loop, issue-driven development: structured prompts, isolated worktrees, parallel agent execution, automated QA gates, and human architectural control.
+
+---
+
+## Professional
+
+**Data Scientist & AI Systems Architect** at Summus Global. Clinical NLP pipelines, medical taxonomy systems, GenAI analysis infrastructure.
+
+**Former:** USMC Captain, Finance Officer. Cybersecurity research with Clarkson Aerospace & AFRL.
+
+**Education:** MBA, UT Austin McCombs (2026). BS Computer Information Systems, University of Houston.
+
+---
+
+## Other
+
+**[Ardent Leatherworks](https://ardentleatherworks.com)** : Small-batch leather goods.
+
+**The Coherence of Aporia** : A book on cognition, craft, AI topology, and the structure of contradictions that hold.
 
 ---
 
