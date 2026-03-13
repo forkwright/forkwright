@@ -2,7 +2,7 @@
 
 Systems engineer. I build sovereign infrastructure in Rust: cognitive agents, media automation, RF intelligence. Everything runs on commodity hardware with no cloud dependencies. Everything is open source.
 
-All three projects share a naming philosophy ([gnomon](https://github.com/forkwright/aletheia/blob/main/docs/gnomon.md)), a unified [development methodology](WORKFLOW.md), and a conviction that the tools you depend on should be tools you own.
+All three projects share a naming philosophy ([gnomon](gnomon.md)), a unified [development methodology](WORKFLOW.md), and a conviction that the tools you depend on should be tools you own.
 
 ---
 
@@ -82,4 +82,4 @@ These projects are built using [closed-loop agentic development](WORKFLOW.md): s
 
 Systems engineer. I build sovereign infrastructure in Rust: cognitive agents, media automation, RF intelligence. Everything runs on commodity hardware with no cloud dependencies. Everything is open source.
 
-All three projects share a naming philosophy ([gnomon](https://github.com/forkwright/aletheia/blob/main/docs/gnomon.md)), a unified [development methodology](WORKFLOW.md), and a conviction that the tools you depend on should be tools you own.
+All three projects share a naming philosophy ([gnomon](gnomon.md)), a unified [development methodology](WORKFLOW.md), and a conviction that the tools you depend on should be tools you own.
