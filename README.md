@@ -2,7 +2,7 @@
 
 Systems engineer. I build sovereign infrastructure in Rust: cognitive agents, media automation, RF intelligence. Everything runs on commodity hardware with no cloud dependencies. Everything is open source.
 
-All three projects share a naming philosophy ([gnomon](https://github.com/forkwright/aletheia/blob/main/docs/gnomon.md)), a unified [development methodology](https://github.com/forkwright/aletheia/blob/main/docs/WORKFLOW.md), and a conviction that the tools you depend on should be tools you own.
+All three projects share a naming philosophy ([gnomon](https://github.com/forkwright/aletheia/blob/main/docs/gnomon.md)), a unified [development methodology](WORKFLOW.md), and a conviction that the tools you depend on should be tools you own.
 
 ---
 
@@ -55,7 +55,7 @@ RF intelligence, mesh networking, and communications sovereignty. 17 crates acro
 
 ## How It Gets Built
 
-These projects are built using [closed-loop agentic development](https://github.com/forkwright/aletheia/blob/main/docs/WORKFLOW.md): structured prompts as units of work, parallel agent dispatch, automated QA gates, and corrective loops that fix their own failures. Rust's compiler is the QA layer. The human decides what gets built and why. The system builds it.
+These projects are built using [closed-loop agentic development](WORKFLOW.md): structured prompts as units of work, parallel agent dispatch, automated QA gates, and corrective loops that fix their own failures. Rust's compiler is the QA layer. The human decides what gets built and why. The system builds it.
 
 ---
 
@@ -82,4 +82,4 @@ These projects are built using [closed-loop agentic development](https://github.
 
 Systems engineer. I build sovereign infrastructure in Rust: cognitive agents, media automation, RF intelligence. Everything runs on commodity hardware with no cloud dependencies. Everything is open source.
 
-All three projects share a naming philosophy ([gnomon](https://github.com/forkwright/aletheia/blob/main/docs/gnomon.md)), a unified [development methodology](https://github.com/forkwright/aletheia/blob/main/docs/WORKFLOW.md), and a conviction that the tools you depend on should be tools you own.
+All three projects share a naming philosophy ([gnomon](https://github.com/forkwright/aletheia/blob/main/docs/gnomon.md)), a unified [development methodology](WORKFLOW.md), and a conviction that the tools you depend on should be tools you own.
