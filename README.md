@@ -1,8 +1,8 @@
 # Cody Kickertz
 
-Systems engineer. I build sovereign infrastructure in Rust: cognitive agents, media automation, RF intelligence, mobile OS. Everything runs on commodity hardware with no cloud dependencies.
+Systems engineer. I build sovereign infrastructure in Rust - cognitive agents, media automation, RF intelligence, mobile OS. Everything runs on commodity hardware with no cloud dependencies.
 
-Five projects share a naming philosophy (naming discipline), a unified development system, and a conviction that the tools you depend on should be tools you own.
+Five projects share a naming philosophy (naming discipline), a unified development system, a focus on quality, and relentless pursuit of data privacy.
 
 ---
 
@@ -81,7 +81,7 @@ Development standards toolkit and agentic dispatch system. The canonical source 
 
 ## How It Gets Built
 
-These projects are built using closed-loop agentic development: structured prompts as units of work, parallel agent dispatch, automated QA gates, and corrective loops that fix their own failures. The compiler is the QA layer. The human decides what gets built and why. The system builds it.
+These projects are built using closed-loop agentic development - structured prompts as units of work, parallel agent dispatch, automated QA gates, and corrective loops that fix their own failures. The compiler is the core QA layer, with commits reviewed by a purpose built agent prior to merge. The strategic direction/roadmap is built in coordination with a dedicated infrastructure agent, and once locked the system builds it.
 
 ---
 
@@ -92,6 +92,8 @@ These projects are built using closed-loop agentic development: structured promp
 **Former:** USMC Captain, Finance Officer. Cybersecurity research with Clarkson Aerospace & AFRL.
 
 **Education:** MBA, UT Austin McCombs (2026). BS Computer Information Systems, University of Houston.
+
+**Research:** Complex systems and the emergency of novel reasoning through topology.
 
 ---
 
