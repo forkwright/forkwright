@@ -1,6 +1,6 @@
 # Cody Kickertz
 
-Systems engineer building self-sovereign infrastructure in Rust. Systems that think, sense, and communicate without depending on anything I don't control.
+Systems engineer building self-sovereign infrastructure in Rust. Systems that think, sense, and communicate without depending on anything not required to be a dependency.
 
 Five projects, one [naming philosophy](gnomon.md), one [development methodology](WORKFLOW.md).
 
@@ -20,7 +20,7 @@ Multi-agent AI system with persistent memory. Agents run as Tokio actors with ch
 
 *ἁρμονία: the joining together of disparate things*
 
-Replaces the dozen-tool media management stack (Sonarr, Radarr, Prowlarr, qBittorrent, Overseerr, etc.) with one Rust backend handling discovery, download, organization, and serving for all media types. Multi-platform player with bit-perfect audio and QUIC multi-room sync.
+Replaces a ~ dozen-tool media management stack (Sonarr, Radarr, Prowlarr, qBittorrent, Overseerr, etc.) with one Rust backend handling discovery, download, organization, and serving for all media types. Multi-platform player with bit-perfect audio and QUIC multi-room sync.
 
 `Rust` `Kotlin` `GPL-3.0`
 
