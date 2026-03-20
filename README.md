@@ -102,7 +102,3 @@ These projects are built using closed-loop agentic development - structured prom
 **[Ardent Leatherworks](https://ardentleatherworks.com)** : Small-batch leather goods.
 
 **The Coherence of Aporia** : A book on cognition, craft, AI topology, and the structure of contradictions that hold.
-
----
-
-[LinkedIn](https://linkedin.com/in/cody-kickertz/)
