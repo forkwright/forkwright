@@ -1,104 +1,81 @@
 # Cody Kickertz
 
-Systems engineer. I build sovereign infrastructure in Rust - cognitive agents, media automation, RF intelligence, mobile OS. Everything runs on commodity hardware with no cloud dependencies.
+Systems engineer building self-sovereign infrastructure in Rust. Systems that think, sense, and communicate without depending on anything I don't control.
 
-Five projects share a naming philosophy ([gnomon](gnomon.md)), a unified [development methodology](WORKFLOW.md), a focus on quality, and relentless pursuit of data privacy.
+Five projects, one [naming philosophy](gnomon.md), one [development methodology](WORKFLOW.md).
 
 ---
 
 ## Projects
 
-### [Aletheia](https://github.com/forkwright/aletheia)
+### [Aletheia](https://github.com/forkwright/aletheia) — cognitive runtime
 
-*ἀλήθεια: unconcealment, disclosure of what is*
+*ἀλήθεια: unconcealment*
 
-Multi-agent cognitive runtime. Persistent memory, adaptive recall, and tool execution in a single Rust binary.
+Multi-agent AI system with persistent memory. Agents run as Tokio actors with character, workspace, and a knowledge graph that grows with every conversation. Embedded Datalog+HNSW engine, bundled SQLite, local embeddings via candle. One binary, no external databases, no cloud dependencies beyond an LLM API key. Encrypted at rest, sandboxed at the kernel level.
 
-- 20 specialized crates (~238K lines of Rust): agent orchestration (Tokio actors), LLM routing, planning, domain knowledge packs, behavioral evaluation
-- Hybrid recall: FSRS power-law decay, epistemic confidence tiers, graph relationship proximity, vector similarity (HNSW), BM25 full-text search, MMR diversity filtering
-- Zero external services: embedded Datalog+HNSW engine (71K LOC, rewritten from CozoDB), bundled SQLite sessions, candle embeddings. Only your LLM API key leaves the machine
-- Each agent is a Tokio actor with persistent character, workspace, and memory. Agents coordinate through a knowledge graph with ecological succession and conflict detection
-- Per-message XChaCha20Poly1305 encryption at rest. Landlock + seccomp sandbox. Pure Rust syscalls via rustix. No libc, no telemetry
-- TUI (ratatui), desktop app (Dioxus), HTTP API (Axum), Signal messenger
+`Rust` `Kotlin` `AGPL-3.0`
 
-`Rust` `AGPL-3.0`
-
-### [Harmonia](https://github.com/forkwright/harmonia)
+### [Harmonia](https://github.com/forkwright/harmonia) — media platform
 
 *ἁρμονία: the joining together of disparate things*
 
-Unified media platform replacing the *arr ecosystem. One system handles discovery, download, organization, metadata, serving, and playback for all media types.
+Replaces the dozen-tool media management stack (Sonarr, Radarr, Prowlarr, qBittorrent, Overseerr, etc.) with one Rust backend handling discovery, download, organization, and serving for all media types. Multi-platform player with bit-perfect audio and QUIC multi-room sync.
 
-- Single Rust backend (Mouseion: 10 crates, Tokio + Axum + SQLx) managing movies, TV, music, audiobooks, ebooks, podcasts, manga, comics, news
-- Built-in Torznab/Newznab indexing, BitTorrent client, archive extraction, subtitle management, quality profiles, and household request workflow. No Sonarr, Radarr, Lidarr, Prowlarr, Jackett, qBittorrent, Overseerr, or their satellite tools
-- Multi-platform player (Akouo) for Android (Kotlin/Compose), web (React), and desktop. Bit-perfect audio core: symphonia decoding, rubato resampling, EBU R128 loudness, gapless playback
-- QUIC streaming (quinn) for multi-room sync. Event-driven subsystem architecture (aggelia bus)
+`Rust` `Kotlin` `GPL-3.0`
 
-`Rust` `Kotlin` `TypeScript` `GPL-3.0`
+### [Akroasis](https://github.com/forkwright/akroasis) — signals intelligence
 
-### [Akroasis](https://github.com/forkwright/akroasis)
+*ἀκρόασις: attentive reception*
 
-*ἀκρόασις: attentive reception, learning through disciplined listening*
-
-RF intelligence, mesh networking, and communications sovereignty. 17 crates across 10 capability domains unified under a single typed signal model.
-
-- Every collection domain (radio, mesh, SDR, proximity, network defense, OSINT) produces typed GeoSignal objects into a shared model (koinon). Processing is domain-agnostic: semaino reads signs in the noise, ichneutes follows the tracks, praxis converts understanding into action
-- Standalone Meshtastic stack (kerykeion): clean-room protobuf, delay-tolerant networking, PACE communications with automated failover. CHIRP-compatible radio programming (syntonia) for Baofeng and Yaesu hardware
-- SDR pipeline (dektis): FutureSDR async block graphs, FM/AM/SSB demodulation, APRS/ADS-B/P25 decoding, direction finding, emitter fingerprinting via RTL-SDR and HackRF
-- Grid-down capable. No cloud. Encrypted by default. Tamper-evident logging with hash chains and chain-of-custody evidence packaging
-- Lethe (λήθη: concealment) handles VPN orchestration, OPSEC scoring, and IMSI catcher detection. Same root as Aletheia, opposite direction: one unconceals truth, the other conceals the operator
+RF intelligence, mesh networking, and communications sovereignty. 17 crates across 10 domains (radio, SDR, mesh, proximity, network defense, OSINT) unified under a single typed signal model. Standalone Meshtastic stack, SDR pipeline for RTL-SDR and HackRF, CHIRP-compatible radio programming. Grid-down capable. Lethe (λήθη: concealment) handles VPN, OPSEC scoring, and IMSI catcher detection — same root as Aletheia, opposite direction.
 
 `Rust` `AGPL-3.0`
 
-### [Thumos](https://github.com/forkwright/thumos)
+### [Thumos](https://github.com/forkwright/thumos) — sovereign mobile OS
 
-*θυμός: spirited part of the soul, seat of courage and indignation*
+*θυμός: spirited part of the soul*
 
-Sovereign mobile operating system. Full Rust from kernel to UI, built for the AGM M7 rugged keypad phone. No Linux kernel, no C we author.
-
-- Custom monolithic kernel (pyknosis): ARM boot, MMU, GIC, timer, process scheduler, syscalls, IPC, ELF loader, RAMFS, device registry, power management, debug console
-- 13 userspace crates: phone (AT modem, CCCI), eidolon (framebuffer UI), asphaleia (packet filter), sema (WiFi/IMSI detection), stegnos (disk encryption), krypta (Signal protocol), leipsanon (panic mode), pteron (BLE), kelyphos (STP framing), aither (WPA), topos (GPS), haphe (input)
-- Hardware kill switches for radios, sensors, USB data. Non-software-overridable
-- Motivated by a 10-minute surveillance audit that found seven threat vectors across three nation-states in the stock firmware
+Full Rust from kernel to UI, built for the AGM M7 rugged keypad phone. Custom monolithic kernel, 13 userspace crates covering phone, UI, encryption, packet filtering, Signal protocol, and GPS. Hardware kill switches for radios, sensors, and USB data. Motivated by a surveillance audit that found seven threat vectors across three nation-states in the stock firmware.
 
 `Rust` `AGPL-3.0`
 
-### Kanon
+### Kanon — standards and automation
 
-*κανών: the measuring rod, the rule by which all else is judged*
+*κανών: the measuring rod*
 
-Development standards toolkit and agentic dispatch system. The canonical source for coding standards, prompt management, and workflow automation across all forkwright repositories. Private repository.
+Development standards toolkit and agentic dispatch system. Private repository.
 
-- 22 coding standards documents (7,500+ lines) covering Rust, Python, TypeScript, Shell, SQL, Nix, and 6 other languages
-- Automated lint engine (basanos) enforcing standards against every file in every repo
-- Agentic dispatch: structured prompts dispatched to parallel Claude sessions with graduated resume, QA gates, and corrective loops
-- Steward role: autonomous CI manager that classifies failures, fixes broken PRs, and auto-merges green ones
-- Training data capture from every dispatch, lint run, and QA review for local model fine-tuning
+The canonical source for coding standards, prompt management, and workflow automation across all forkwright projects. 25+ standards documents covering code, writing, architecture, security, testing, operations, and QA. Automated lint engine enforces every rule. Agentic dispatch sends structured prompts to parallel Claude sessions with QA gates and corrective loops. An autonomous steward manages CI, fixes failures, and merges clean PRs. Every dispatch, lint run, and review generates training data for local model fine-tuning.
 
 `Rust` `Python` `AGPL-3.0`
 
 ---
 
-## How It Gets Built
+## How it gets built
 
-These projects are built using closed-loop agentic development - structured prompts as units of work, parallel agent dispatch, automated QA gates, and corrective loops that fix their own failures. The compiler is the core QA layer, with commits reviewed by a purpose built agent prior to merge. The strategic direction/roadmap is built in coordination with a dedicated infrastructure agent, and once locked the system builds it.
+Closed-loop agentic development. Structured prompts as units of work, dispatched to parallel agent sessions. Automated QA gates validate output against kanon standards. Corrective loops fix their own failures. The compiler and lint engine are the quality floor. A dedicated agent reviews every commit before merge. Strategic direction is built in coordination with an infrastructure agent, then the system executes it.
 
 ---
 
 ## Professional
 
-**Data Scientist & AI Systems Architect** at Summus Global. Clinical NLP pipelines, medical taxonomy systems, GenAI analysis infrastructure.
+**Data Scientist & AI Systems Architect** at Summus Global. Clinical NLP, medical taxonomy, GenAI analysis infrastructure.
 
 **Former:** USMC Captain, Finance Officer. Cybersecurity research with Clarkson Aerospace & AFRL.
 
 **Education:** MBA, UT Austin McCombs (2026). BS Computer Information Systems, University of Houston.
 
-**Research:** Complex systems and the emergency of novel reasoning through topology.
+**Research:** Complex systems and the emergence of novel reasoning through topology.
 
 ---
 
 ## Other
 
-**[Ardent Leatherworks](https://ardentleatherworks.com)** : Small-batch leather goods.
+**[Ardent Leatherworks](https://ardentleatherworks.com)** — small-batch leather goods
 
-**The Coherence of Aporia** : A book on cognition, craft, AI topology, and the structure of contradictions that hold.
+**The Coherence of Aporia** — in progress. A book on cognition, craft, and the structure of contradictions that hold.
+
+---
+
+[LinkedIn](https://linkedin.com/in/cody-kickertz/)
