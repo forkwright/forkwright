@@ -2,7 +2,7 @@
 
 Systems engineer building self-sovereign infrastructure in Rust. Systems that think, sense, and communicate without depending on anything not required to be a dependency.
 
-Five projects, one [naming philosophy](gnomon.md), one [development methodology](WORKFLOW.md).
+Six projects, one [naming philosophy](gnomon.md), one [development methodology](WORKFLOW.md).
 
 ---
 
@@ -37,6 +37,14 @@ RF intelligence, mesh networking, and communications sovereignty. 17 crates acro
 *θυμός: spirited part of the soul*
 
 Full Rust from kernel to UI, built for the AGM M7 rugged keypad phone. Custom monolithic kernel, 13 userspace crates covering phone, UI, encryption, packet filtering, Signal protocol, and GPS. Hardware kill switches for radios, sensors, and USB data. Motivated by a surveillance audit that found seven threat vectors across three nation-states in the stock firmware.
+
+`Rust` `AGPL-3.0`
+
+### [Plegma](https://github.com/forkwright/plegma) — mesh networking
+
+*πλέγμα: a woven thing, a plaited mesh*
+
+Clean-room Rust implementation of a Tailscale-compatible mesh networking stack. The `dictyon` client speaks wire-compatible Noise control protocol to join existing tailnets and establishes WireGuard peer sessions via boringtun. A future `histos` coordination server replaces tailscale.com/Headscale for operators who want full sovereignty, with hardware-key-signed admin operations via FIDO2. Built because no production-grade Rust Tailscale client or server exists today. First consumer is Thumos; the whole forkwright ecosystem is the next step. Pre-alpha.
 
 `Rust` `AGPL-3.0`
 
