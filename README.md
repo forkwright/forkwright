@@ -2,7 +2,7 @@
 
 Systems engineer building self-sovereign infrastructure in Rust. Systems that think, sense, and communicate without depending on anything not required to be a dependency.
 
-Six projects, one [naming philosophy](gnomon.md), one [development methodology](WORKFLOW.md).
+Seven projects, one [naming philosophy](gnomon.md), one [development methodology](WORKFLOW.md).
 
 ---
 
@@ -54,7 +54,15 @@ Clean-room Rust implementation of a Tailscale-compatible mesh networking stack. 
 
 Development standards toolkit and agentic dispatch system. Private repository.
 
-The canonical source for coding standards, prompt management, and workflow automation across all forkwright projects. 25+ standards documents covering code, writing, architecture, security, testing, operations, and QA. Automated lint engine enforces every rule. Agentic dispatch sends structured prompts to parallel Claude sessions with QA gates and corrective loops. An autonomous steward manages CI, fixes failures, and merges clean PRs. Every dispatch, lint run, and review generates training data for local model fine-tuning.
+The canonical source for coding standards, prompt management, and workflow automation across all forkwright projects. 38 standards documents covering code, writing, architecture, security, testing, operations, and QA. Automated lint engine enforces every rule. Agentic dispatch sends structured prompts to parallel Claude sessions with QA gates and corrective loops. An autonomous steward manages CI, fixes failures, and merges clean PRs. Every dispatch, lint run, and review generates training data for local model fine-tuning.
+
+`Rust` `Python` `AGPL-3.0`
+
+### Gnomon — sovereign cognitive architecture
+
+*γνώμων: that which reveals by indicating*
+
+The engineering instantiation of the thesis from *The Coherence of Aporia*: intelligence emerges from topology, not node complexity. Decomposes a teacher model into a routing topology over shared frozen primitives, then runs thousands of lightweight Adaptive Compute Units (ACUs) in a three-layer small-world network — Herd (3,000 ACUs on CPU) → Dianoia (12 instances on GPU) → Nous (1 instance on GPU) — with the human operator as the meta-layer. Specification phase: v0.8 spec suite complete, F2/F4 falsification tests executed, no training runs yet. Private repository.
 
 `Rust` `Python` `AGPL-3.0`
 
