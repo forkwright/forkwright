@@ -54,7 +54,7 @@ Clean-room Rust implementation of a Tailscale-compatible mesh networking stack. 
 
 Development standards toolkit and agentic dispatch system. Private repository.
 
-The canonical source for coding standards, prompt management, and workflow automation across all forkwright projects. 25+ standards documents covering code, writing, architecture, security, testing, operations, and QA. Automated lint engine enforces every rule. Agentic dispatch sends structured prompts to parallel Claude sessions with QA gates and corrective loops. An autonomous steward manages CI, fixes failures, and merges clean PRs. Every dispatch, lint run, and review generates training data for local model fine-tuning.
+The canonical source for coding standards, prompt management, and workflow automation across all forkwright projects. 38 standards documents covering code, writing, architecture, security, testing, operations, and QA. Automated lint engine enforces every rule. Agentic dispatch sends structured prompts to parallel Claude sessions with QA gates and corrective loops. An autonomous steward manages CI, fixes failures, and merges clean PRs. Every dispatch, lint run, and review generates training data for local model fine-tuning.
 
 `Rust` `Python` `AGPL-3.0`
 
