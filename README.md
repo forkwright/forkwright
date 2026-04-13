@@ -40,9 +40,9 @@ Full Rust from kernel to UI, built for the AGM M7 rugged keypad phone. Custom mo
 
 `Rust` `AGPL-3.0`
 
-### [Plegma](https://github.com/forkwright/plegma) — mesh networking
+### [Hamma](https://github.com/forkwright/hamma) — mesh networking
 
-*πλέγμα: a woven thing, a plaited mesh*
+*ἅμμα: a knot, a tie, a fastening*
 
 Clean-room Rust implementation of a Tailscale-compatible mesh networking stack. The `dictyon` client speaks wire-compatible Noise control protocol to join existing tailnets and establishes WireGuard peer sessions via boringtun. A future `histos` coordination server replaces tailscale.com/Headscale for operators who want full sovereignty, with hardware-key-signed admin operations via FIDO2. Built because no production-grade Rust Tailscale client or server exists today. First consumer is Thumos; the whole forkwright ecosystem is the next step. Pre-alpha.
 
