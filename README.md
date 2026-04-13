@@ -12,17 +12,25 @@ The public repositories here are the visible edge of a larger ecosystem built ar
 
 *ἀλήθεια: unconcealment*
 
-Multi-agent AI system with persistent memory. Agents run as Tokio actors with character, workspace, and a knowledge graph that grows with every conversation. Embedded Datalog+HNSW engine, bundled SQLite, local embeddings via candle. One binary, no external databases, no cloud dependencies beyond an LLM API key. Encrypted at rest, sandboxed at the kernel level.
+Multi-agent AI system with persistent memory. Agents run as Tokio actors with character, workspace, and a knowledge graph that grows with every conversation. Embedded Datalog+HNSW engine, fjall LSM storage, local embeddings via candle. Dioxus desktop app. One binary, no external databases, no cloud dependencies beyond an LLM API key. Encrypted at rest, sandboxed at the kernel level.
 
-`Rust` `Kotlin` `AGPL-3.0`
+`Rust` `AGPL-3.0`
+
+### [Dioptron](https://github.com/forkwright/dioptron) — sovereign web runtime
+
+*δίοπτρον: the instrument through which one sees*
+
+Sovereign web runtime with agent co-tenancy. Local web substrate where operator and AI agents are peer users of the same capability surface — browsing, ingesting, querying, and acting on the web through a unified programmatic interface. Three-band architecture (engine, instrument, operations) with a cross-cutting tenancy plane. Full active observation, defense, and offense capability. Specification phase.
+
+`Rust` `AGPL-3.0`
 
 ### [Harmonia](https://github.com/forkwright/harmonia) — media platform
 
 *ἁρμονία: the joining together of disparate things*
 
-Replaces a ~ dozen-tool media management stack (Sonarr, Radarr, Prowlarr, qBittorrent, Overseerr, etc.) with one Rust backend handling discovery, download, organization, and serving for all media types. Multi-platform player with bit-perfect audio and QUIC multi-room sync.
+Replaces a dozen-tool media management stack (Sonarr, Radarr, Prowlarr, qBittorrent, Overseerr, etc.) with one Rust backend handling discovery, download, organization, and serving for all media types. Bit-perfect audio engine with QUIC multi-room sync. Canonical storage layout with smart path sanitization and TOML sidecar metadata.
 
-`Rust` `Kotlin` `GPL-3.0`
+`Rust` `AGPL-3.0`
 
 ### [Akroasis](https://github.com/forkwright/akroasis) — signals intelligence
 
@@ -38,13 +46,13 @@ RF intelligence, mesh networking, and communications sovereignty. 17 crates acro
 
 Full Rust from kernel to UI, built for the AGM M7 rugged keypad phone. Custom monolithic kernel, 13 userspace crates covering phone, UI, encryption, packet filtering, Signal protocol, and GPS. Hardware kill switches for radios, sensors, and USB data. Motivated by a surveillance audit that found seven threat vectors across three nation-states in the stock firmware.
 
-`Rust` `AGPL-3.0`
+`Rust` `PolyForm Shield 1.0.0`
 
 ### [Hamma](https://github.com/forkwright/hamma) — mesh networking
 
 *ἅμμα: a knot, a tie, a fastening*
 
-Clean-room Rust implementation of a Tailscale-compatible mesh networking stack. The `dictyon` client speaks wire-compatible Noise control protocol to join existing tailnets and establishes WireGuard peer sessions via boringtun. A future `histos` coordination server replaces tailscale.com/Headscale for operators who want full sovereignty, with hardware-key-signed admin operations via FIDO2. Built because no production-grade Rust Tailscale client or server exists today. First consumer is Thumos; the whole forkwright ecosystem is the next step. Pre-alpha.
+Clean-room Rust implementation of a Tailscale-compatible mesh networking stack. The `dictyon` client speaks wire-compatible Noise control protocol to join existing tailnets and establishes WireGuard peer sessions via boringtun. A future `histos` coordination server replaces tailscale.com/Headscale for operators who want full sovereignty, with hardware-key-signed admin operations via FIDO2. Pre-alpha.
 
 `Rust` `AGPL-3.0`
 
@@ -54,9 +62,9 @@ Clean-room Rust implementation of a Tailscale-compatible mesh networking stack. 
 
 Development standards toolkit and agentic dispatch system. Private repository.
 
-The canonical source for coding standards, prompt management, and workflow automation across all forkwright projects. 38 standards documents covering code, writing, architecture, security, testing, operations, and QA. Automated lint engine enforces every rule. Agentic dispatch sends structured prompts to parallel Claude sessions with QA gates and corrective loops. An autonomous steward manages CI, fixes failures, and merges clean PRs. Every dispatch, lint run, and review generates training data for local model fine-tuning.
+The canonical source for coding standards, prompt management, and workflow automation across all forkwright projects. 39 standards documents. Automated lint engine with 800+ rules. Privacy audit, health dashboard, steward auto-close. Agentic dispatch to parallel Claude and Kimi sessions with QA gates. Local inference on W7900 via llama-server. Every dispatch generates training data for local model fine-tuning.
 
-`Rust` `Python` `AGPL-3.0`
+`Rust` `AGPL-3.0`
 
 ---
 
