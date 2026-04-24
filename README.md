@@ -1,18 +1,18 @@
 # Cody Kickertz
 
-Systems engineer building self-sovereign infrastructure in Rust. Systems that think, sense, and communicate without depending on anything not required to be a dependency.
+Systems engineer building sovereign software systems in Rust: cognition, media, communications, research infrastructure, and the tooling that keeps them coherent.
 
 The public repositories here are the visible edge of a larger ecosystem built around local-first, dependency-conscious design and a strong preference for owned infrastructure over rented abstraction.
 
 ---
 
-## Projects
+## Public projects
 
 ### [Aletheia](https://github.com/forkwright/aletheia) — cognitive runtime
 
 *ἀλήθεια: unconcealment*
 
-Multi-agent AI system with persistent memory. Agents run as Tokio actors with character, workspace, and a knowledge graph that grows with every conversation. Embedded Datalog+HNSW engine, fjall LSM storage, local embeddings via candle. Dioxus desktop app. One binary, no external databases, no cloud dependencies beyond an LLM API key. Encrypted at rest, sandboxed at the kernel level.
+Multi-agent AI runtime with persistent memory, local knowledge storage, and a desktop operator surface. Built to keep cognition, memory, and orchestration inside one sovereign system rather than scattering them across hosted services.
 
 `Rust` `AGPL-3.0`
 
@@ -20,7 +20,7 @@ Multi-agent AI system with persistent memory. Agents run as Tokio actors with ch
 
 *δίοπτρον: the instrument through which one sees*
 
-Sovereign web runtime with agent co-tenancy. Local web substrate where operator and AI agents are peer users of the same capability surface — browsing, ingesting, querying, and acting on the web through a unified programmatic interface. Three-band architecture (engine, instrument, operations) with a cross-cutting tenancy plane. Full active observation, defense, and offense capability. Specification phase.
+Web substrate for operator and agent co-tenancy. The goal is a single capability surface for browsing, ingesting, querying, and acting on the web without splitting human and machine workflows into separate stacks.
 
 `Rust` `AGPL-3.0`
 
@@ -28,7 +28,7 @@ Sovereign web runtime with agent co-tenancy. Local web substrate where operator 
 
 *ἁρμονία: the joining together of disparate things*
 
-Replaces a dozen-tool media management stack (Sonarr, Radarr, Prowlarr, qBittorrent, Overseerr, etc.) with one Rust backend handling discovery, download, organization, and serving for all media types. Bit-perfect audio engine with QUIC multi-room sync. Canonical storage layout with smart path sanitization and TOML sidecar metadata.
+Unified media system for discovery, download, organization, playback, and serving. The design intent is to replace a pile of loosely coupled media tools with one coherent backend and operator experience.
 
 `Rust` `AGPL-3.0`
 
@@ -36,7 +36,7 @@ Replaces a dozen-tool media management stack (Sonarr, Radarr, Prowlarr, qBittorr
 
 *ἀκρόασις: attentive reception*
 
-RF intelligence, mesh networking, and communications sovereignty. 17 crates across 10 domains (radio, SDR, mesh, proximity, network defense, OSINT) unified under a single typed signal model. Standalone Meshtastic stack, SDR pipeline for RTL-SDR and HackRF, CHIRP-compatible radio programming. Grid-down capable. Lethe (λήθη: concealment) handles VPN, OPSEC scoring, and IMSI catcher detection — same root as Aletheia, opposite direction.
+Communications and signals sovereignty: RF observation, mesh networking, proximity tooling, and network intelligence under a single typed model of signal collection and interpretation.
 
 `Rust` `AGPL-3.0`
 
@@ -44,7 +44,7 @@ RF intelligence, mesh networking, and communications sovereignty. 17 crates acro
 
 *θυμός: spirited part of the soul*
 
-Full Rust from kernel to UI, built for the AGM M7 rugged keypad phone. Custom monolithic kernel, 13 userspace crates covering phone, UI, encryption, packet filtering, Signal protocol, and GPS. Hardware kill switches for radios, sensors, and USB data. Motivated by a surveillance audit that found seven threat vectors across three nation-states in the stock firmware.
+Mobile operating system and device stack for rugged, operator-controlled hardware. The project exists to collapse a hostile smartphone dependency chain into something inspectable and owned.
 
 `Rust` `PolyForm Shield 1.0.0`
 
@@ -52,31 +52,49 @@ Full Rust from kernel to UI, built for the AGM M7 rugged keypad phone. Custom mo
 
 *ἅμμα: a knot, a tie, a fastening*
 
-Clean-room Rust implementation of a Tailscale-compatible mesh networking stack. The `dictyon` client speaks wire-compatible Noise control protocol to join existing tailnets and establishes WireGuard peer sessions via boringtun. A future `histos` coordination server replaces tailscale.com/Headscale for operators who want full sovereignty, with hardware-key-signed admin operations via FIDO2. Pre-alpha.
+Clean-room mesh networking stack aimed at Tailscale-class connectivity without surrendering the coordination layer to a third party.
 
 `Rust` `AGPL-3.0`
 
-### Kanon — standards and automation
+### [Zetesis](https://github.com/forkwright/zetesis) — research substrate
+
+*ζήτησις: systematic inquiry*
+
+Research and search substrate for agent systems: free-first provider routing, self-hosted orchestration, budget enforcement, caching, and cited result normalization.
+
+`Rust` `AGPL-3.0`
+
+---
+
+## Internal infrastructure and research
+
+### Kanon — standards and control plane
 
 *κανών: the measuring rod*
 
-Development standards toolkit and agentic dispatch system. Private repository.
+Private standards, automation, and dispatch system for the portfolio. It holds the workflow, lint rules, issue triage, review gates, and planning authority that keep the rest of the ecosystem from drifting.
 
-The canonical source for coding standards, prompt management, and workflow automation across all forkwright projects. 39 standards documents. Automated lint engine with 800+ rules. Privacy audit, health dashboard, steward auto-close. Agentic dispatch to parallel Claude and Kimi sessions with QA gates. Local inference on W7900 via llama-server. Every dispatch generates training data for local model fine-tuning.
+### Logismos — local inference runtime
 
-`Rust` `AGPL-3.0`
+*λογισμός: reasoning, calculation*
+
+Private Rust runtime for local model serving and inference orchestration on dedicated hardware. It is the self-hosted inference substrate behind the broader system.
+
+### The Coherence of Aporia
+
+Book-length research and writing project on cognition, contradiction, craft, and the structure of coherent systems. It is the meta-framework behind much of the ecosystem's naming and architectural direction.
 
 ---
 
 ## How it gets built
 
-Closed-loop agentic development. Structured prompts as units of work, dispatched to parallel agent sessions. Automated QA gates validate output against kanon standards. Corrective loops fix their own failures. The compiler and lint engine are the quality floor. A dedicated agent reviews every commit before merge. Strategic direction is built in coordination with an infrastructure agent, then the system executes it.
+Closed-loop, issue-driven development with structured prompts, isolated worktrees, parallel agent execution, automated QA gates, and human architectural control. The goal is not autonomy theater; it is a development system that preserves standards, context, and accountability as the portfolio grows.
 
 ---
 
 ## Professional
 
-**Data Scientist & AI Systems Architect** at Summus Global. Clinical NLP, medical taxonomy, GenAI analysis infrastructure.
+**Data Scientist & AI Systems Architect** at Summus Global. Clinical NLP, medical taxonomy, and GenAI analysis infrastructure.
 
 **Former:** USMC Captain, Finance Officer. Cybersecurity research with Clarkson Aerospace & AFRL.
 
@@ -89,8 +107,6 @@ Closed-loop agentic development. Structured prompts as units of work, dispatched
 ## Other
 
 **[Ardent Leatherworks](https://ardentleatherworks.com)** — small-batch leather goods
-
-**The Coherence of Aporia** — in progress. A book on cognition, craft, and the structure of contradictions that hold.
 
 ---
 
