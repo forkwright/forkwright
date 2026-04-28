@@ -4,7 +4,7 @@ Systems engineer building sovereign software systems in Rust: cognition, media, 
 
 The public repositories here are the visible edge of a larger ecosystem built around local-first, dependency-conscious design and owned infrastructure over rented abstraction. English names mark user-facing applications; Greek names (basanos, archeion, mnemosyne, parodos, …) mark shared infrastructure and cross-cutting concerns inside each app.
 
-**Active surface:** 8 public repos, 7+ internal crates, ~50 merged PRs/day on a self-hosted forge. GitHub is a mirror; primary authoring is forge-native.
+GitHub is a mirror; primary authoring is forge-native.
 
 ## Public projects
 
@@ -57,10 +57,6 @@ Research and search substrate for agent systems: free-first provider routing, se
 
 `Rust` `AGPL-3.0`
 
-## Emerging architecture
-
-**Theatron** — Dioxus + Blitz native desktop substrate currently replacing aletheia's UI layer and becoming the fleet-wide front-end framework. Multi-month plan in flight.
-
 ## Internal infrastructure and research
 
 **Kanon** *(κανών: the measuring rod)* — Self-hosted code forge (PRs, CI, issues) and control plane for the portfolio. Hosts workflow automation, multi-provider dispatch routing, and **basanos**: a custom lint engine that goes beyond clippy with rule-precision tiers, suppression-as-violation, citation discipline, and AI-trope detection. The GitHub-side repos are mirrors of forge state.
@@ -72,8 +68,6 @@ Research and search substrate for agent systems: free-first provider routing, se
 ## How it gets built
 
 Forge-native, closed-loop, issue-driven development. Structured prompts, isolated worktrees, parallel agent execution, and automated QA gates anchored on the basanos lint engine and human architectural review. Shared infrastructure follows a demand-pull rule: a `SHARED-INFRA.md` registry tracks crates with named cross-repo consumers; speculative shared crates are forbidden. Currently zero crates have earned promotion into the registry — the discipline is real.
-
-The goal is not autonomy theater. It is a development system that preserves standards, context, and accountability as the portfolio grows.
 
 ## Professional
 
