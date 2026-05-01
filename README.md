@@ -1,5 +1,3 @@
-# Cody Kickertz
-
 Systems engineer building sovereign software systems in Rust: cognition, media, communications, research infrastructure, and the tooling that keeps them coherent.
 
 The public repositories here are the visible edge of a larger ecosystem built around local-first, dependency-conscious design and owned infrastructure over rented abstraction. English names mark user-facing applications; Greek names (basanos, archeion, mnemosyne, parodos, …) mark shared infrastructure and cross-cutting concerns inside each app.
