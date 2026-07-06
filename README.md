@@ -1,71 +1,113 @@
-Systems engineer building sovereign software systems in Rust: cognition, media, communications, research infrastructure, and the tooling that keeps them coherent.
+Systems engineer building in Rust: cognition, media, communications, and the tooling that keeps them coherent. Local-first, dependency-conscious, owned infrastructure over rented abstraction.
 
-The public repositories here are the visible edge of a larger ecosystem built around local-first, dependency-conscious design and owned infrastructure over rented abstraction. English names mark user-facing applications; Greek names (basanos, archeion, mnemosyne, parodos, …) mark shared infrastructure and cross-cutting concerns inside each app.
+The public repositories here are the visible edge of a larger fleet. English names mark user-facing applications; Greek names (dictyon, kerykeion, apotheke, themelion, …) mark shared infrastructure and cross-cutting concerns inside each app.
 
-GitHub is a mirror; primary authoring is forge-native.
+## Systems
 
-## Public projects
-
-### [Aletheia](https://github.com/forkwright/aletheia) — cognitive runtime
+### [Aletheia](https://github.com/forkwright/aletheia) — agent runtime
 *ἀλήθεια: unconcealment*
 
-Multi-agent AI runtime with persistent memory, local knowledge storage, and a multi-provider dispatch fleet that routes work to remote (Claude, Kimi K2) and on-premise (local Qwen3.5/Qwen3-Coder via logismos) models. The desktop UI layer is migrating to theatron.
-
-`Rust` `AGPL-3.0`
-
-### [Dioptron](https://github.com/forkwright/dioptron) — sovereign web runtime
-*δίοπτρον: the instrument through which one sees*
-
-Web substrate for operator and agent co-tenancy. One capability surface for browsing, ingesting, querying, and acting on the web without splitting human and machine workflows into separate stacks.
+Agent runtime with persistent session memory, a local knowledge store, Datalog reasoning, a tool registry, and multi-provider model dispatch across remote and local models. Desktop UI built on theatron.
 
 `Rust` `AGPL-3.0`
 
 ### [Harmonia](https://github.com/forkwright/harmonia) — media platform
 *ἁρμονία: the joining together of disparate things*
 
-Unified media system for discovery, download, organization, playback, and serving — replacing a pile of loosely-coupled tools with one coherent backend and operator experience.
+Unified media system — library backend, format conversion, request and approval workflows, and Android playback. One coherent backend replacing a pile of loosely-coupled tools.
 
 `Rust` `AGPL-3.0`
 
-### [Akroasis](https://github.com/forkwright/akroasis) — signals intelligence
+### [Akroasis](https://github.com/forkwright/akroasis) — RF and signals
 *ἀκρόασις: attentive reception*
 
-Communications and signals sovereignty: RF observation, mesh networking, proximity tooling, and network intelligence under a single typed model of signal collection and interpretation.
+RF observation and control, Meshtastic mesh networking with multi-gateway failover, geo-signal aggregation with anomaly alerting, and an encrypted credential vault — a single typed model of signal collection and interpretation.
 
 `Rust` `AGPL-3.0`
 
-### [Thumos](https://github.com/forkwright/thumos) — sovereign mobile OS
-*θυμός: spirited part of the soul*
+### [Thumos](https://github.com/forkwright/thumos) — mobile OS
+*θυμός: the spirited part of the soul*
 
-Mobile operating system and device stack for rugged, operator-controlled hardware. From-scratch kernel targeting MT6739 silicon — collapses a hostile smartphone dependency chain into something inspectable and owned.
+From-scratch bare-metal Rust OS for the AGM M7 (MediaTek MT6739): custom kernel — MMU, scheduler, IPC, VFS — with userspace for modem AT handling, Signal-protocol messaging, packet filtering, and encrypted storage. No Linux in the final system. Hardware bring-up pending.
 
 `Rust` `PolyForm Shield 1.0.0`
 
 ### [Hamma](https://github.com/forkwright/hamma) — mesh networking
 *ἅμμα: a knot, a tie, a fastening*
 
-Clean-room mesh networking stack aimed at Tailscale-class connectivity without surrendering the coordination layer to a third party. Pre-alpha.
+Clean-room, Tailscale-compatible mesh networking client: Noise handshake, control protocol, peer registration, map streaming. The WireGuard data plane is not wired yet. Pre-alpha.
+
+`Rust` `MIT OR Apache-2.0`
+
+## Libraries
+
+Extracted from the systems above on consumer pull, not speculation.
+
+### [Theatron](https://github.com/forkwright/theatron) — desktop UI infrastructure
+*θέατρον: the seeing-place*
+
+Dioxus/Blitz UI primitives, design-token discipline, markdown rendering, an HTTP/SSE client, and OS integration. Consumed by aletheia as a pinned git dependency.
+
+`Rust` `MIT OR Apache-2.0`
+
+### [Sphragis](https://github.com/forkwright/sphragis) — post-quantum sealing
+*σφραγίς: a seal*
+
+X-Wing hybrid KEM (X25519 + ML-KEM-768) with a ChaCha20-Poly1305 envelope. Unaudited preview behind an explicit feature flag.
+
+`Rust` `AGPL-3.0`
+
+### [Koinon](https://github.com/forkwright/koinon) — common scaffolding
+*κοινόν: that which is shared*
+
+Tracing init, typed errors, config loading, and a CLI prelude.
+
+`Rust` `Apache-2.0`
+
+### [Heurema](https://github.com/forkwright/heurema) — search primitives
+*εὕρημα: a thing found*
+
+Contracts for vector search, full-text search, persistence, and rank fusion. Reciprocal-rank fusion is implemented; HNSW and BM25 land by extraction from their in-app implementations.
 
 `Rust` `AGPL-3.0`
 
 ### [Zetesis](https://github.com/forkwright/zetesis) — research substrate
 *ζήτησις: systematic inquiry*
 
-Research and search substrate for agent systems: free-first provider routing, self-hosted orchestration, budget enforcement, caching, and cited result normalization.
+Budget, cost, citation, and query contracts for agent research pipelines, with a fixture-driven deep-research loop. Phase-1 scaffold; provider integrations pending.
 
 `Rust` `AGPL-3.0`
 
-## Internal infrastructure and research
+## Web
 
-**Kanon** *(κανών: the measuring rod)* — Self-hosted code forge (PRs, CI, issues) and control plane for the portfolio. Hosts workflow automation, multi-provider dispatch routing, and **basanos**: a custom lint engine that goes beyond clippy with rule-precision tiers, suppression-as-violation, citation discipline, and AI-trope detection. The GitHub-side repos are mirrors of forge state.
+### [Typikon](https://github.com/forkwright/typikon) — site substrate
+*τυπικόν: the book of order*
 
-**Logismos** *(λογισμός: reasoning, calculation)* — Rust + HIP inference runtime targeting AMD W7900. Serves local Qwen models as the on-premise arm of the dispatch fleet.
+Zola theme, JSON-Schema frontmatter validation, scaffolding scripts, and a CI gate bundle — CSP enforcement, link checking, accessibility, smoke tests — consumed by fleet sites as a git submodule.
 
-**The Coherence of Aporia** — Long-running research project on cognition, contradiction, craft, and the structure of coherent systems. The architectural metaphors and naming convention emerge from it.
+`Zola` `AGPL-3.0`
+
+### [Epistole](https://github.com/forkwright/epistole) — newsletter service
+*ἐπιστολή: a letter*
+
+Subscriber lifecycle — subscribe, confirm, unsubscribe — and archive flows over an embedded store. SMTP delivery is the next phase.
+
+`Rust` `AGPL-3.0`
+
+## In design
+
+### [Dioptron](https://github.com/forkwright/dioptron) — web runtime
+*δίοπτρον: the instrument through which one sees*
+
+Specification and requirements for a web runtime where operator and agents share one capability surface — browsing, ingesting, querying, and acting — instead of splitting human and machine workflows into separate stacks. Design documents only; implementation not started.
+
+`AGPL-3.0`
 
 ## How it gets built
 
-Forge-native, closed-loop, issue-driven development. Structured prompts, isolated worktrees, parallel agent execution, and automated QA gates anchored on the basanos lint engine and human architectural review. Shared infrastructure follows a demand-pull rule: a `SHARED-INFRA.md` registry tracks crates with named cross-repo consumers; speculative shared crates are forbidden. Currently zero crates have earned promotion into the registry — the discipline is real.
+Issue-driven, agent-executed, gate-anchored: structured prompts, isolated worktrees, parallel agent execution, a custom lint engine well past clippy (rule-precision tiers, suppression-as-violation, citation discipline), CI-exact local gates, and adversarial review before merge. Shared infrastructure follows a demand-pull rule: crates are extracted into standalone repos when consumers materialize, never speculatively.
+
+The private side of the fleet carries the rest — the standards and dispatch control plane behind those gates, a GPU inference stack for local models, and a long-running research project on cognition, contradiction, and coherent systems that the naming and architecture grow out of.
 
 ## Professional
 
