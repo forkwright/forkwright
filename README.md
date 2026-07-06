@@ -106,6 +106,20 @@ Subscriber lifecycle — subscribe, confirm, unsubscribe — and archive flows o
 
 ## In design
 
+### [Pinax](https://github.com/forkwright/pinax) — relational storage engine
+*πίναξ: the tablet, the register — the Pinakes of Callimachus were the first structured index of knowledge*
+
+Relational storage engine designed from scratch in Rust: multi-writer MVCC, per-page encryption, causal changelog as a storage primitive, strict typing, zero C dependency. Replaces SQLite across the fleet. Design phase; no code yet.
+
+`PolyForm Shield 1.0.0`
+
+### [Mneme](https://github.com/forkwright/mneme) — deductive storage engine
+*μνήμη: memory as faculty*
+
+Datalog engine for facts, rules, and inference — content-addressed facts with supersede-based retraction, unified provenance, incrementally maintained views. The engine exists inside aletheia today and promotes here once it clears its overhaul phases. Design phase.
+
+`PolyForm Shield 1.0.0`
+
 ### [Dioptron](https://github.com/forkwright/dioptron) — web runtime
 *δίοπτρον: the instrument through which one sees*
 
