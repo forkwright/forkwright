@@ -30,6 +30,13 @@ From-scratch bare-metal Rust OS for the AGM M7 (MediaTek MT6739): custom kernel 
 
 `Rust` `PolyForm Shield 1.0.0`
 
+### [Logismos](https://github.com/forkwright/logismos) — GPU inference
+*λογισμός: reasoning, calculation*
+
+From-scratch GPU inference stack for AMD hardware (HIP + hipBLASLt, gfx1100): hand-written WMMA kernels living beside the Rust that launches them, with CPU reference implementations gating correctness. Transformer embedding models run end-to-end on CPU; the GPU cutover is blocked on hardware availability.
+
+`Rust` `PolyForm Shield 1.0.0`
+
 ### [Hamma](https://github.com/forkwright/hamma) — mesh networking
 *ἅμμα: a knot, a tie, a fastening*
 
@@ -59,6 +66,13 @@ X-Wing hybrid KEM (X25519 + ML-KEM-768) with a ChaCha20-Poly1305 envelope. Unaud
 Tracing init, typed errors, config loading, and a CLI prelude.
 
 `Rust` `Apache-2.0`
+
+### [Epitelesis](https://github.com/forkwright/epitelesis) — subprocess substrate
+*ἐπιτέλεσις: executing-to-completion*
+
+Typed command-execution wrapper over the std and tokio process APIs — timeouts as contract, concurrent pipe draining, typed errors carrying captured output. Every subprocess in the kanon toolkit goes through it.
+
+`Rust` `Apache-2.0 OR MIT`
 
 ### [Heurema](https://github.com/forkwright/heurema) — search primitives
 *εὕρημα: a thing found*
