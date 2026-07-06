@@ -1,6 +1,4 @@
-Systems engineer building in Rust: cognition, media, communications, and the tooling that keeps them coherent. Local-first, dependency-conscious, owned infrastructure over rented abstraction.
-
-The public repositories here are the visible edge of a larger fleet. English names mark user-facing applications; Greek names (dictyon, kerykeion, apotheke, themelion, …) mark shared infrastructure and cross-cutting concerns inside each app.
+Rust systems — an agent runtime, a media platform, RF and signals tooling, a bare-metal phone OS — and the libraries shared underneath them. Repo names are Greek; each entry below carries its translation.
 
 ## Systems
 
@@ -40,8 +38,6 @@ Clean-room, Tailscale-compatible mesh networking client: Noise handshake, contro
 `Rust` `MIT OR Apache-2.0`
 
 ## Libraries
-
-Extracted from the systems above on consumer pull, not speculation.
 
 ### [Theatron](https://github.com/forkwright/theatron) — desktop UI infrastructure
 *θέατρον: the seeing-place*
@@ -102,12 +98,6 @@ Subscriber lifecycle — subscribe, confirm, unsubscribe — and archive flows o
 Specification and requirements for a web runtime where operator and agents share one capability surface — browsing, ingesting, querying, and acting — instead of splitting human and machine workflows into separate stacks. Design documents only; implementation not started.
 
 `AGPL-3.0`
-
-## How it gets built
-
-Issue-driven, agent-executed, gate-anchored: structured prompts, isolated worktrees, parallel agent execution, a custom lint engine well past clippy (rule-precision tiers, suppression-as-violation, citation discipline), CI-exact local gates, and adversarial review before merge. Shared infrastructure follows a demand-pull rule: crates are extracted into standalone repos when consumers materialize, never speculatively.
-
-The private side of the fleet carries the rest — the standards and dispatch control plane behind those gates, a GPU inference stack for local models, and a long-running research project on cognition, contradiction, and coherent systems that the naming and architecture grow out of.
 
 ## Professional
 
