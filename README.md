@@ -1,10 +1,6 @@
-Rust systems - an agent runtime, a media platform, RF and signals tooling, a bare-metal phone OS - and the libraries shared underneath them. Repo names are Greek. Each entry below carries its translation.
+I build systems infrastructure, mostly in Rust, around agent runtimes, distributed systems, local inference, networking, and edge computing.
 
-## Practice
-
-[ardent.tools](https://ardent.tools) - independent engagements in governed agent infrastructure.
-
-The systems below are the same work in the open. Each carries its own maturity label, and several are unfinished and name the part that is missing.
+Professionally, I work through [Ardent Tools](hhtps://ardent.tools) on governed agent infrastructure. The systems below are the same engineering work in the open.
 
 ## Systems
 
