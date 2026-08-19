@@ -1,6 +1,6 @@
 I build systems infrastructure, mostly in Rust, around agent runtimes, distributed systems, local inference, networking, and edge computing.
 
-Professionally, I work through [Ardent Tools](hhtps://ardent.tools) on governed agent infrastructure. The systems below are the same engineering work in the open.
+Professionally, I work through [Ardent Tools](https://ardent.tools) on governed agent infrastructure. The systems below are the same engineering work in the open.
 
 ## Systems
 
