@@ -35,7 +35,7 @@ From-scratch bare-metal Rust OS for the AGM M7 (MediaTek MT6739): custom kernel 
 ### [Logismos](https://github.com/forkwright/logismos) - GPU inference
 *λογισμός: reasoning, calculation*
 
-From-scratch GPU inference stack for AMD hardware (HIP + hipBLASLt, gfx1100): hand-written WMMA kernels living beside the Rust that launches them, with CPU reference implementations gating correctness. Transformer embedding models run end-to-end on CPU. The GPU cutover is blocked on hardware availability.
+Greenfield Rust and AMD GPU foundation for an agent-aware operating environment for local AI compute. Target: gfx1100. CPU model path exists; GPU qualification is pending on the available W7900 48 GB baseline. Text and retrieval on one GPU comes first.
 
 `Rust` `PolyForm Shield 1.0.0`
 
